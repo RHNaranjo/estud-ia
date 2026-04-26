@@ -1,0 +1,119 @@
+# =============================================================================
+# Estud-IA — .gitignore
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# DATOS DE ALUMNOS
+# -----------------------------------------------------------------------------
+data/                         # Carpeta principal de datos temporales
+*.csv                         # Cualquier archivo CSV (calificaciones, comentarios)
+*.xlsx                        # Versiones en Excel de los datos
+*.xls
+uploads/                      # Archivos subidos por el usuario (Streamlit, etc.)
+reports/                      # Reportes generados — pueden contener datos sensibles
+output/                       # Cualquier output generado por los agentes
+*.pdf                         # Reportes exportados en PDF
+
+
+# -----------------------------------------------------------------------------
+# CREDENCIALES
+# -----------------------------------------------------------------------------
+.env                          # Variables de entorno con API keys, secretos
+.env.*                        # Variantes: .env.local, .env.production, etc.
+!.env.example                 # EXCEPCIÓN: el ejemplo de plantilla SÍ se versiona
+secrets/                      # Carpeta de secretos, si se llega a usar
+credentials/                  # Credenciales de servicio (ej. Google Cloud SA JSON)
+*.json                        # Service account keys y otros JSON con credenciales
+!package.json                 # EXCEPCIÓN: archivos de configuración de Node.js
+!package-lock.json
+service_account*.json         # Archivos de cuenta de servicio de Google Cloud
+gcp_credentials*.json
+adc.json                      # Application Default Credentials locales
+
+
+# -----------------------------------------------------------------------------
+# GOOGLE CLOUD / VERTEX AI / ADK
+# -----------------------------------------------------------------------------
+application_default_credentials.json
+.config/gcloud/               # Configuración local de gcloud CLI
+vertexai_cache/               # Cache local de Vertex AI
+
+
+# -----------------------------------------------------------------------------
+# ENTORNO DE PYTHON
+# -----------------------------------------------------------------------------
+# Entornos virtuales
+venv/
+.venv/
+env/
+.env_python/
+ENV/
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# Distribuciones / paquetes
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+
+# mypy / type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebooks (checkpoints podrían contener datos)
+.ipynb_checkpoints/
+*.ipynb
+
+
+# -----------------------------------------------------------------------------
+# SISTEMA OPERATIVO
+# -----------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+
+# -----------------------------------------------------------------------------
+# EDITORES E IDEs
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+
+# -----------------------------------------------------------------------------
+# LOGS Y ARCHIVOS TEMPORALES
+# -----------------------------------------------------------------------------
+logs/
+*.log
+*.tmp
+*.bak
+*.orig
+temp/
+tmp/
