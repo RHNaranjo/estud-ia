@@ -85,15 +85,7 @@ Dado que se requiere una interfaz pequeña y muy básica para la validación ini
 
 ---
 
-## 5. Preguntas Abiertas para el Usuario
-
-> [!WARNING]
-> Antes de proceder con la ejecución del código, por favor confirma:
-> 1. **Framework Web:** ¿Estás de acuerdo con utilizar **Streamlit** para la interfaz básica, o prefieres algo en la terminal / otro framework?
-> 2. **Estructura CSV:** ¿Tienes un formato específico (columnas exactas) para los CSV que deba tomar en cuenta, o puedo proponer una estructura estándar (ej. `id_alumno`, `calif_p1`, `calif_p2` para el primero y `id_comentario`, `texto` para el segundo)?
-> 3. **Modelo:** Asumiré el uso de la API de Gemini (a través de Google ADK / Vertex AI) para el desarrollo de los agentes. ¿Cuentas con las credenciales necesarias para pruebas locales?
-
-## 6. Plan de Verificación
+## 5. Plan de Verificación
 
 1. **Pruebas de Ingestión:** Crear CSVs falsos (mock data) con nombres ficticios y comentarios variados. Verificar que el `DataSanitizationAgent` elimine correctamente cualquier dato personal introducido a propósito.
 2. **Pruebas de Análisis:** Validar que los agentes detecten correctamente las tendencias (ej. si programo una bajada del 30% en el parcial 2 en el mock de datos, el agente debe mencionarlo).
