@@ -1,0 +1,16 @@
+# =============================================================================
+# Estud-IA — Dependencias
+# =============================================================================
+
+# Google ADK (Agent Development Kit)
+google-adk>=1.2.0
+
+# Procesamiento de datos
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# Interfaz de usuario
+streamlit>=1.30.0
+
+# Variables de entorno
+python-dotenv>=1.0.0
