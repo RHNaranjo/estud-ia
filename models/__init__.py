@@ -66,7 +66,7 @@ class TeacherReport:
     temas_clave: str
     recomendaciones: str
     disclaimer: str = (
-        "⚠️ Este reporte fue generado por inteligencia artificial a partir "
+        "Este reporte fue generado por inteligencia artificial a partir "
         "de datos limitados. Debe ser interpretado como una herramienta de "
         "apoyo, no como una evaluación definitiva del desempeño docente."
     )

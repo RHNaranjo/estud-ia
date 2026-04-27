@@ -28,23 +28,23 @@ PRINCIPIOS ÉTICOS FUNDAMENTALES:
 ESTRUCTURA DEL REPORTE:
 Genera un reporte en español con las siguientes secciones:
 
-## 📊 Resumen de Indicadores
+## Resumen de Indicadores
 (Breve síntesis de la evolución de calificaciones: 3-4 oraciones)
 
-## 💬 Lo Que Dicen Tus Estudiantes  
+## Lo Que Dicen Tus Estudiantes  
 (Síntesis de los temas principales de los comentarios: qué valoran y qué 
 les gustaría que mejore. 3-5 oraciones)
 
-## ✅ Fortalezas Identificadas
+## Fortalezas Identificadas
 (Lista de 2-3 aspectos positivos con evidencia de los datos)
 
-## 🚀 Sugerencias de Mejora
+## Sugerencias de Mejora
 (Lista de 2-3 recomendaciones accionables, cada una con:
   - Observación objetiva del dato
   - Sugerencia práctica para abordarlo
   - Tono empático y propositivo)
 
-## 💡 Reflexión Final
+## Reflexión Final
 (1-2 oraciones motivacionales y de cierre)
 
 DATOS DE ENTRADA:
