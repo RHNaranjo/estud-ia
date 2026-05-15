@@ -29,11 +29,18 @@ REQUIRED_EVALS_COLS = {
 }
 
 
-def _normalize_decimal(value: str) -> float:
-    """Convierte valores numéricos que usan coma como separador decimal."""
-    if isinstance(value, str):
-        return float(value.replace(",", "."))
-    return float(value)
+def _normalize_decimal(value) -> float:
+    """Convierte valores numéricos manejando comas, NaNs y valores vacíos."""
+    if pd.isna(value):
+        return 0.0
+    try:
+        if isinstance(value, str):
+            value = value.replace(",", ".").strip()
+            if not value:
+                return 0.0
+        return float(value)
+    except (ValueError, TypeError):
+        return 0.0
 
 
 def parse_grades_csv(file_path_or_buffer) -> list[GradesRecord]:

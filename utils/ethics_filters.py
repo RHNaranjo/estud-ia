@@ -92,18 +92,41 @@ def is_toxic(text: str) -> bool:
     return False
 
 
-def sanitize_comment(text: str) -> str | None:
-    """
-    Aplica todos los filtros éticos a un comentario.
+# -------------------------------------------------------------------------
+# Filtro Anti-Prompt Injection
+# -------------------------------------------------------------------------
 
-    Returns:
-        El comentario limpio, o None si debe descartarse por toxicidad.
-    """
+# Patrones que indican un posible intento de manipular el LLM
+PROMPT_INJECTION_PATTERNS = [
+    r"ignora (?:todas )?(?:tus|las) instrucciones",
+    r"olvida (?:todas )?(?:tus|las) instrucciones",
+    r"olvida lo anterior",
+    r"act[uú]a como",
+    r"eres un (?:nuevo )?modelo",
+    r"desactiva (?:tus )?filtros",
+    r"system prompt",
+]
+
+def is_prompt_injection(text: str) -> bool:
+    """Determina si un comentario intenta hacer prompt injection."""
+    lower = text.lower()
+    for pattern in PROMPT_INJECTION_PATTERNS:
+        if re.search(pattern, lower):
+            return True
+    return False
+
+
+def sanitize_comment(text: str) -> str | None:
+    """Aplica todos los filtros éticos a un comentario."""
     # Paso 1: Remover PII
     clean = remove_pii(text)
 
     # Paso 2: Filtrar toxicidad
     if is_toxic(clean):
+        return None
+        
+    # Paso 3: Filtrar prompt injection
+    if is_prompt_injection(clean):
         return None
 
     return clean

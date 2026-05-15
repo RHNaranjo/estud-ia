@@ -62,9 +62,7 @@ class FeedbackSummary:
 class TeacherReport:
     """Reporte final generado para el profesor de una materia."""
     materia: str
-    resumen_estadistico: str
-    temas_clave: str
-    recomendaciones: str
+    reporte_markdown: str
     disclaimer: str = (
         "Este reporte fue generado por inteligencia artificial a partir "
         "de datos limitados. Debe ser interpretado como una herramienta de "
