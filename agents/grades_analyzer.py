@@ -22,7 +22,7 @@ FORMATO DE RESPUESTA (máximo 300 palabras):
 # Instancia del agente de calificaciones
 grades_analyzer_agent = Agent(
     name="grades_analyzer",
-    model="gemini-2.5-flash",
+    model="gemini-1.5-flash",
     description="Analiza tendencias de calificaciones.",
     instruction=GRADES_ANALYZER_PROMPT,
 )

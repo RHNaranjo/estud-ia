@@ -21,7 +21,7 @@ FORMATO DE RESPUESTA (máximo 300 palabras):
 # Instancia del agente de retroalimentación
 feedback_analyzer_agent = Agent(
     name="feedback_analyzer",
-    model="gemini-2.5-flash",
+    model="gemini-1.5-flash",
     description="Analiza comentarios de estudiantes.",
     instruction=FEEDBACK_ANALYZER_PROMPT,
 )

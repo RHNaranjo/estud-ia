@@ -32,7 +32,7 @@ ESTRUCTURA DEL REPORTE:
 # Instancia del agente coach
 teacher_coach_agent = Agent(
     name="teacher_coach",
-    model="gemini-2.5-flash",
+    model="gemini-1.5-flash",
     description="Genera reportes empáticos para profesores.",
     instruction=TEACHER_COACH_PROMPT,
 )
